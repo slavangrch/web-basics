@@ -1,0 +1,40 @@
+body {
+    color:white;
+    font-family:sans-serif;
+    margin: 0;
+}
+
+.name {
+    text-align: center;
+    color: #27a2c7;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#header, #footer {
+    background-color: #27a2c7;
+    padding: 1%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#header, #footer h1 {
+    padding-left: 42%;
+}
+
+#text-left {
+    background-color: #8e8ee7;
+}
+
+#text-right {
+    background-color: #79bad6;
+}
+
+.text {
+    padding: 36% 18%;
+}
+
+
