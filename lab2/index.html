@@ -8,25 +8,31 @@
 </head>
 <body>
     <!-- <div class="container"> -->
-        <form id="box" action="result.html" method="GET">
-                <label for="name">ПІБ</label>
-                <input type="text" id="name" placeholder="ТТТТТТ Т.Т." name="ПІБ">
- 
-                <label for="variant">Варіант</label>
-                <input type="text" id="variant" placeholder="ЧЧ" name="Варіант">
- 
-                <label for="group">Група</label>
-                <input type="text" id="group" placeholder="ТТ-ЧЧ" name="Група">
- 
-                <label for="phone_number">Телефон</label>
-                <input type="text" id="phone_number" placeholder="(ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ" name="Телефон">
-
-                <label for="id_card">ID-card</label>
-                <input type="text" id="id_card" placeholder="ТТ №ЧЧЧЧЧЧ" name="ID-card">
-     
+        <form id="form" class="form" action="result.html" method="GET">
+                <div class="form-cotrol">
+                    <label for="username">ПІБ</label>
+                    <input type="text" id="username" placeholder="ТТТТТТ Т.Т." name="ПІБ">
+                </div>
+                <div class="form-control">
+                    <label for="variant">Варіант</label>
+                    <input type="text" id="variant" placeholder="ЧЧ" name="Варіант">
+                </div>
+                <div class="form-control">
+                    <label for="group">Група</label>
+                    <input type="text" id="group" placeholder="ТТ-ЧЧ" name="Група">
+                </div>
+                <div class="form-control">
+                    <label for="phone-number">Телефон</label>
+                    <input type="text" id="phone-number" placeholder="(ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ" name="Телефон">
+                </div>
+                <div class="form-control">
+                    <label for="id-card">ID-card</label>
+                    <input type="text" id="id-card" placeholder="ТТ №ЧЧЧЧЧЧ" name="ID-card">
+                </div>
             <button type="reset">Reset</button>
-            <button type="submit" onclick="submit">Submit</button>
+            <button type="submit">Submit</button>
         </form>
+    <script src="script.js"></script>
     <!-- </div> -->
 </body>
 </html>
