@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Результат</title>
 </head>
 <body>
-    <div id="results"></div>
-    <a href="/lab2/index.html">Back to form</a>
+    <h1>Дані з форми:</h1>
+    <div id="result-container">
+        <!-- Тут буде виведена інформація з форми -->
+    </div>
     <script>
-        const resultList = document.getElementById('results')
-        new URLSearchParams(window.location.search).forEach((value,
-        name) => {
-            resultList.append(`${name}: ${value}`)
-            resultList.append(document.createElement('br'))
-        })
+        // Отримуємо дані з локального сховища (LocalStorage)
+        const userData = localStorage.getItem('userData');
+
+        // Виводимо дані на сторінці "result.html"
+        if (userData) {
+            const resultContainer = document.getElementById('result-container');
+            resultContainer.innerHTML = userData;
+        }
     </script>
 </body>
 </html>
