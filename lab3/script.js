@@ -11,12 +11,12 @@ function addUser() {
     .then(data => {
         const pic = data.results[0].picture.medium;
         const name = data.results[0].name.first;
+        const lastname = data.results[0].name.last;
         const city = data.results[0].location.city;
         const country = data.results[0].location.country;
         const postcode = data.results[0].location.postcode;
 
         const users = document.getElementById('card');
-        // console.log(user);
         const userContainer = document.createElement('div')
         
         userContainer.classList.add('user')
@@ -25,10 +25,10 @@ function addUser() {
         imageElement.src = pic;
         userContainer.appendChild(imageElement);
         userContainer.innerHTML += `
-        <p>Ім'я: ${name}</p>
-        <p>Місто: ${city}</p>
-        <p>Країна: ${country}</p>
-        <p>Поштовий індекс: ${postcode}</p>
+        <p>Name: ${name} ${lastname}</p>
+        <p>City: ${city}</p>
+        <p>Country: ${country}</p>
+        <p>Postcode: ${postcode}</p>
         `;
 
         users.appendChild(userContainer)

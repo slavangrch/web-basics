@@ -1,5 +1,5 @@
 body {
-    background-color: #445D48
+    background-color: #445D48;
 }
 
 #card {
@@ -14,14 +14,18 @@ body {
     border: 2px solid  #FDE5D4;
     border-radius: 5px;
     margin: 20px;
-    padding: 10px;
+    padding: 20px;
 
 }
 
-#btn-add, #btn-clear {
-    margin: 0 auto;
+.button {
+    margin: 10px;
     padding: 10px 25px;
     background-color: #001524;
-    border: 2px solid  #877f7a;
-    
+    border: 2px solid  #877f7a; 
+}
+
+.button:hover {
+    background-color: #5E3023;
+    cursor: pointer;
 }
