@@ -1,0 +1,27 @@
+body {
+    background-color: #445D48
+}
+
+#card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user {
+    box-sizing: border-box;
+    width: 220px;
+    background-color: #D6CC99;
+    border: 2px solid  #FDE5D4;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+
+}
+
+#btn-add, #btn-clear {
+    margin: 0 auto;
+    padding: 10px 25px;
+    background-color: #001524;
+    border: 2px solid  #877f7a;
+    
+}

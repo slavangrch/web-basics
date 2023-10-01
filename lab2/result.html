@@ -8,14 +8,9 @@
 </head>
 <body>
     <h1>Дані з форми:</h1>
-    <div id="result-container">
-        <!-- Тут буде виведена інформація з форми -->
-    </div>
+    <div id="result-container"></div>
     <script>
-        // Отримуємо дані з локального сховища (LocalStorage)
         const userData = localStorage.getItem('userData');
-
-        // Виводимо дані на сторінці "result.html"
         if (userData) {
             const resultContainer = document.getElementById('result-container');
             resultContainer.innerHTML = userData;
