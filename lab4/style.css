@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#send-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#message-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+#message-container div {
+    background-color: #CCC;
+    padding: 5px;
+}
+#message-container div:nth-child(2n) {
+    background-color: #FFF;
+  }
+
+input[type='text'] {
+    padding: 10px ;
+    border-radius: 10px;
+    background-color: rgba(179, 208, 223, 0.502);
+    border: 1px solid rgba(136, 128, 128, 0.824);
+    margin: 10px;
+}
+
+#btn-send {
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid #24a0ed;
+    background-color: #24a0ed;
+    color: white;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    
+}
+#btn-send:hover {
+    background-color: white;
+    border: 1px solid #24a0ed;
+    color: #24a0ed;
+}

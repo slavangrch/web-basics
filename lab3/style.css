@@ -5,6 +5,7 @@ body {
 #card {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .user {
@@ -13,7 +14,7 @@ body {
     background-color: #D6CC99;
     border: 2px solid  #FDE5D4;
     border-radius: 5px;
-    margin: 20px;
+    margin: 10px;
     padding: 20px;
 
 }
@@ -23,6 +24,7 @@ body {
     padding: 10px 25px;
     background-color: #001524;
     border: 2px solid  #877f7a; 
+    color: white;
 }
 
 .button:hover {
