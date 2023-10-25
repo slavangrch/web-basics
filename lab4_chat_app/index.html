@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html> 
+
+<head>
+	<title>Chat app</title> 
+	<style>
+		* {
+    		margin: 0;
+		}
+
+		html,
+		body {
+		height: 100%;
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.message-area {
+			flex: 1 0 auto;
+			/* padding: 1rem; */
+			background: #e6f2ff;
+		}
+
+		.form {
+			display: flex;
+			justify-content: space-between;
+			flex: 0 0 auto;
+			padding: 1rem;
+			background: rgba(90, 90, 146, 0.415);
+		}
+
+		input[type='text'] {
+			padding: 10px ;
+			border-radius: 10px;
+			background-color: #e6f2ff;
+			border: 1px solid rgba(136, 128, 128, 0.824);
+			margin: 5px;
+		}
+
+		.btn-send {
+			padding: 10px 20px;
+			border-radius: 10px;
+			margin: 5px;
+			border: 1px solid #24a0ed;
+			background-color: #24a0ed;
+			color: white;
+			cursor: pointer;
+		}
+
+		.sender-name {
+			background-color: rgba(128, 128, 128, 0.782);
+			width: 100%;
+			text-align: center;
+			color: white;
+		}
+
+		.message-area {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.input-message {
+			flex-grow: 1;
+		}
+	</style>
+</head> 
+
+<body> 
+	<div class="message-area" 
+		id="messageArea"> 
+	</div> 
+
+	<form class="form" 
+		id="form"> 
+		<input class="input-name" 
+			type="text"
+			placeholder="Name"
+			id="myname"> 
+		<input class="input-message" 
+			type="text"
+			placeholder="Message"
+			id="message"> 
+		<button class="btn-send"> 
+			Send 
+		</button> 
+	</form> 
+</body> 
+<script src="/socket.io/socket.io.js"></script> 
+<script> 
+	let socket = io(); 
+
+	let form = document.getElementById('form'); 
+	let myname = document.getElementById('myname'); 
+	let message = document.getElementById('message'); 
+	let messageArea = document.getElementById("messageArea"); 
+
+	form.addEventListener("submit", (e) => { 
+		e.preventDefault(); 
+
+		if (message.value) { 
+			socket.emit('send name', myname.value); 
+			socket.emit('send message', message.value); 
+			message.value = ""; 
+		} 
+	}); 
+
+	socket.on("send name", (username) => { 
+		let name = document.createElement("p"); 
+		name.classList.add('sender-name')
+		name.textContent = username + ":"; 
+		messageArea.appendChild(name); 
+	}); 
+
+	socket.on("send message", (chat) => { 
+		let chatContent = document.createElement("p"); 
+		chatContent.textContent = chat; 
+		messageArea.appendChild(chatContent); 
+	}); 
+</script> 
+
+</html>
